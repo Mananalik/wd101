@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      input#name:invalid:focus {
+        border: 1px solid red;
+      }
+      input#email:invalid:focus {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="./src/output.css" />
+  <body>
+    <div class="font-[sans-serif]">
+      <div class="min-h-screen flex fle-col items-center justify-center p-6">
+        <div
+          class="grid lg:grid-cols-2 items-center gap-6 max-w-7xl max-lg:max-w-xl w-full"
+        >
+          <form id="user-form" class="lg:max-w-md w-full">
+            <h3 class="text-gray-800 text-3xl font-extrabold mb-12">
+              Registration
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <label class="text-gray-800 text-sm mb-2 block">Name</label>
+                <input
+                  required
+                  name="name"
+                  type="text"
+                  id="name"
+                  class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-4 focus:bg-transparent outline-blue-500 transition-all"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div>
+                <label class="text-gray-800 text-sm mb-2 block">Email</label>
+                <input
+                  required
+                  name="email"
+                  type="email"
+                  id="email"
+                  class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-4 focus:bg-transparent outline-blue-500 transition-all"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div>
+                <label class="text-gray-800 text-sm mb-2 block">Password</label>
+                <input
+                  required
+                  name="password"
+                  type="password"
+                  id="password"
+                  class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-4 focus:bg-transparent outline-blue-500 transition-all"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div>
+                <label for="dob">Date of Birth</label>
+                <input
+                  required
+                  type="date"
+                  id="dob"
+                  name="dob"
+                  max="2006-10-08"
+                  min="1969-10-08"
+                  class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-4 focus:bg-transparent outline-blue-500 transition-all"
+                />
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="acceptTerms"
+                  name="remember-me"
+                  type="checkbox"
+                  class="h-4 w-4 shrink-0 border-gray-300 rounded"
+                />
+                <label
+                  for="remember-me"
+                  class="ml-3 block text-sm text-gray-800"
+                >
+                  <a
+                    href="javascript:void(0);"
+                    class="text-blue-600 font-semibold hover:underline ml-1"
+                  ></a
+                  >Accept Terms & Conditions
+                </label>
+              </div>
+            </div>
+
+            <div class="mt-12">
+              <button
+                type="submit"
+                id="submit"
+                class="py-4 px-8 text-sm font-semibold text-white tracking-wide bg-blue-600 hover:bg-blue-700 focus:outline-none"
+              >
+                Submit
+              </button>
+            </div>
+            <p class="text-sm text-gray-800 mt-6">
+              Already have an account?
+              <a
+                href="javascript:void(0);"
+                class="text-blue-600 font-semibold hover:underline ml-1"
+                >Login here</a
+              >
+            </p>
+          </form>
+
+          <div class="h-full max-lg:mt-12">
+            <img
+              src="./login-image.webp"
+              class="w-full h-full object-cover"
+              alt="Dining Experience"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative bg-white pa-6 mt-5 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10"
+    >
+      <div class="mx-auto justify-center">
+        <h2 class="text-3xl text-center font-bold leading-tight">Entries</h2>
+        <div
+          class="divide-y divide-gray-300/50 text-center"
+          id="user-entries"
+        ></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
